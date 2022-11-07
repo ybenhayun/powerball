@@ -45,7 +45,7 @@ body {
 
 .results {
     flex-direction: column;
-    height: 500px;
+    height: 24rem;
     width: min(500px, 98vw);
     position: relative;
     border: solid 2px darkgray;
@@ -159,8 +159,8 @@ button:hover {
     background: #F4F4F4;
     border-radius: 100%;
     width: min(5rem, 11vw);
+    height: min(5rem, 11vw);
     font-size: min(4rem, 9vw);
-    aspect-ratio: 1;
     font-family: Impact, fantasy;
     color: black;
     -webkit-box-shadow: 2px 2px 5px 0px rgb(0 0 0);
