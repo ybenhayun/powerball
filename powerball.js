@@ -189,7 +189,7 @@ function calculateOdds(count, num_tix) {
     let odds = Math.pow((PROB-num_tix)/PROB, count)*100;
     let display = document.getElementsByClassName('odds')[0];
 
-    display.innerHTML = (100-odds).toFixed(4) + "% of people would have won by now.";
+    display.innerHTML = Math.min((100-odds).toFixed(4), 99.9999) + "% of people would have won by now.";
 }
 
 function withCommas(number) {
