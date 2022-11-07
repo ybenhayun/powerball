@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="powerball.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="powerball.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="top"></h1>
+    
+    <div class="opening">
+        <p>
+            number of tickets: 
+            <input type="text" name="num-tix" id = "num-tix" value = "1" oninput="this.value=this.value.replace(/(?![0-9])./gmi,'')">
+        </p>
+        <p>
+            buy the same tickets every time:
+            <input type="checkbox" name="same-ticket" id="same-ticket">
+        </p>
+        <button class="start" onclick="playTheLotto()">play the odds</button>
+    </div>
+    
+    <!-- <h1 class = 'header hidden'> You have lost <span class = 'count'> 0 </span> lotteries in a row.</h1> -->
+    <div class="header hidden">
+        <h1>You have lost <span class="count">0</span> lotteries in a row</h1>
+    </div>
+
+    <div class="results">
+        <div class="graph">
+            <div class = "group zero">
+                <div class="title">Nada</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group PB0">
+                <div class="title">PB ($4)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group PB1">
+                <div class="title">1+PB ($4)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group PB2">
+                <div class="title">2+PB ($7)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group X3">
+                <div class="title">3 ($7)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group PB3">
+                <div class="title">3+PB ($100)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group X4">
+                <div class="title">4 ($100)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group PB4">
+                <div class="title">4+PB ($50K)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+            <div class = "group X5">
+                <div class="title">5 ($1M)</div>
+                <div class="bar"></div>
+                <div class="percent"></div>
+            </div>
+        </div>
+        <div class="other">
+            <div class="cost"></div>
+            <div class="small-prizes"></div>
+            <div class="time"></div>
+            <div class="odds"></div>
+        </div>
+    </div>
+</body>
+</html>

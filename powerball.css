@@ -1,0 +1,178 @@
+:root {
+    --bar-color: #E86252;
+    --text-color: navajowhite;
+    --background-color:  #4e4e9f;
+    --alt-text-color: #020300;
+    --alt-background-color: #E3DFFF;
+    --powerball-color: #DB1735;
+}
+
+*:not(title) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    flex-direction: column;
+    background: var(--background-color);
+    color: navajowhite;
+    gap: 3rem;
+}
+
+.count {
+    margin: .5rem;
+}
+
+.header {
+    text-align: center;
+    font-size: min(2rem, 8vw);
+    flex-direction: column;
+}
+
+.header > h1 {
+    text-align: center;
+    display: inline;
+    font-size: min(2rem, 8vw);
+}
+
+.results {
+    flex-direction: column;
+    height: 500px;
+    width: min(500px, 98vw);
+    position: relative;
+    border: solid 2px darkgray;
+}
+
+.graph {
+   flex-direction: column; 
+   width: 100%;
+   height: 100%;
+   align-items: start;
+   gap: 3px;
+}
+
+.bar {
+    border: 2px solid black;
+    height: 100%;
+    background: var(--bar-color);
+}
+
+.percent {
+    margin-left: 5px;
+    word-spacing: 9999px;
+    font-size: min(1rem, 3.5vw);
+}
+
+.title {
+    width: min(6.5rem, 19vw);
+    word-spacing: 9999px;
+    text-align: center;
+    height: 100%;
+    background: var(--alt-background-color);
+    color: var(--alt-text-color);
+}
+
+.group {
+    flex: 1;
+    width: 100%;
+    justify-content: start;
+}
+
+.other:has(.left) {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    width: 60%;
+    background: white;
+    color: black;
+}
+
+.other > div:not(.odds) {
+    width: 100%;
+    height: 33%;
+    font-size: min(1.1rem, 4vw);
+}
+
+.odds {
+    font-size: min(1rem, 3vw);
+}
+
+.opening {
+    flex-direction: column;
+}
+
+#num-tix {
+    width: 4rem;
+    font-size: 1.5rem;
+    margin: 0.3rem;
+}
+
+p:has(#num-tix) {
+    font-size: 2rem;
+}
+
+#same-ticket {
+    margin: 0.3rem;
+}
+
+button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    cursor: pointer;
+    color: gainsboro;
+}
+
+.hidden {
+    position: absolute;
+    top: -9999px;
+}
+
+.left {
+    position: absolute;
+    left: 5px;
+    text-decoration: underline;
+}
+
+.right {
+    position: absolute;
+    right: 5px;
+}
+
+.ball {
+    background: #F4F4F4;
+    border-radius: 100%;
+    width: min(5rem, 11vw);
+    font-size: min(4rem, 9vw);
+    aspect-ratio: 1;
+    font-family: Impact, fantasy;
+    color: black;
+    -webkit-box-shadow: 2px 2px 5px 0px rgb(0 0 0);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px 0px rgb(0 0 0);
+}
+
+.ball:has(.powerball) {
+    background-color: var(--powerball-color);
+}
+
+.powerball {
+    transform: scale(1,2);
+    font-size: .5em;
+}
