@@ -161,15 +161,22 @@ button:hover {
     width: min(5rem, 11vw);
     height: min(5rem, 11vw);
     font-size: min(4rem, 9vw);
-    font-family: Impact, fantasy;
+    font-family: Impacto, Impact, sans-serif;
     color: black;
     -webkit-box-shadow: 2px 2px 5px 0px rgb(0 0 0);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
     box-shadow: 2px 2px 5px 0px rgb(0 0 0);
 }
 
+
 .ball:has(.powerball) {
     background-color: var(--powerball-color);
+}
+
+@font-face {
+  font-family: Impacto;
+  font-weight: bold;
+  src: url(data:font/ttf;base64,AAEAAAAXAQ...);
 }
 
 .powerball {
