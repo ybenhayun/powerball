@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     background: var(--background-color);
     color: navajowhite;
-    gap: 3rem;
+    justify-content: space-evenly;
 }
 
 .count {
